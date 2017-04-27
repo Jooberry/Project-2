@@ -7,14 +7,7 @@ package example.codeclan.com.pokemonsafari;
 class Lapras extends Pokemon {
 
     public Lapras(String name, String type, String gender, String hungerLevel){
-        super(name);
-        super(type);
-        super(gender);
-        super(hungerLevel);
-    }
-
-    public String eat(){
-        return "Lapras munches on algae";
+        super(name, type, gender, hungerLevel);
     }
 
 }

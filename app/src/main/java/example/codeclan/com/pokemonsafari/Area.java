@@ -24,4 +24,12 @@ public class Area {
         return monsters.size();
     }
 
+    public void addPokemon(Pokemon pokemon){
+        monsters.add(pokemon);
+    }
+
+    public void removeAll() {
+        monsters.clear();
+    }
+
 }

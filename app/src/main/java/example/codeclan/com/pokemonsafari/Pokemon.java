@@ -11,8 +11,6 @@ public abstract class Pokemon {
     private String gender;
     private String hungerLevel;
 
-    public abstract String eat();
-
     public Pokemon(String name, String type, String gender, String hungerLevel){
         this.name = name;
         this.type = type;
@@ -24,4 +22,26 @@ public abstract class Pokemon {
     public String getName() {
         return this.name;
     }
+
+
+    public String getType() {
+        return type;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public String getHungerLevel() {
+        return hungerLevel;
+    }
+
+    public String eat(){
+        if (hungerLevel == "Hungry"){
+            return hungerLevel = "Content";
+        } else {
+            return hungerLevel = "Full";
+        }
+    }
+
 }

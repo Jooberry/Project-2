@@ -16,13 +16,13 @@ public class AreaTest {
 
     @Before
     public void before(){
-        area = new Area("Water");
-        pokemon = new Lapras();
+        area = new Area("Lake");
+        pokemon = new Lapras("Lapras", "Water", "Female", "Hungry");
     }
 
     @Test
     public void areaHasTypeTest(){
-        assertEquals("Water", area.getType());
+        assertEquals("Lake", area.getType());
     }
 
     @Test
@@ -34,6 +34,13 @@ public class AreaTest {
     public void addAreaToSafariTest(){
         area.addPokemon(pokemon);
         assertEquals("Lapras", pokemon.getName());
+    }
+
+    @Test
+    public void removeAllPokemonFromAreaTest(){
+        area.addPokemon(pokemon);
+        area.removeAll();
+        assertEquals(0, area.pokemoncount());
     }
 
 }
